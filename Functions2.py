@@ -29,3 +29,13 @@ def function4(*var):#tuple
 function4(10,20)
 function4(10,20,30,40)
 function4(10,20,30,40,50,60)
+
+def add(*var):#tuple
+    sum=0
+    for i in var:
+        sum = sum + i
+    print(sum)
+
+add(10,20)
+add(10,20,30,40)
+add(10,20,30,40,50,60)
