@@ -1,3 +1,4 @@
+#Example of For Loop
 for i in range(1,101):
     print(i,end=' ')
 print('\n')
