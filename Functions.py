@@ -12,4 +12,17 @@ functions2(10,20)
 def functions3(num1,num2):
     num3 = num1 + num2
     return num3
-print("Number returned = ",functions3(100,200),end=' ')
+print("Number returned = ",functions3(10,20.5),end=' ')
+print()
+
+def functions4(num1,num2):
+    num3 = float(num1) + num2
+    return num3
+print("Number returned = ",functions4('10',20.5),end=' ')
+print()
+
+def functions5(num1,num2):
+    num3 = num1 + str(num2)
+    return num3
+print("Number returned = ",functions5('10',20.5),end=' ')
+print()
