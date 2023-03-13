@@ -1,3 +1,4 @@
+#Currency Calculator
 Traveller_currency = int(input("Input the amount you have"))
 Traveller_Country_Currency = input("Enter the Country currency you have")
 
