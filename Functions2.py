@@ -13,3 +13,5 @@ def function2(num1,num2,num3,num4):
 function2(num4 =20,num1=20,num3=90,num2=50)
 print()
 
+#datas are always sent from right to left in an argument
+#default arguments
