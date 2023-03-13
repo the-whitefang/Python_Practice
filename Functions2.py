@@ -15,8 +15,10 @@ print()
 
 #datas are always sent from right to left in an argument
 #default arguments
-def function3(name,rollno,branch,clgname="GIET"):
+def function3(name,rollno,branch="CSE",clgname="GIET"):
     print(name,rollno,branch,clgname)
 function3("Abhilash",182,"CSE")
-function3("Ayush",147,"CSE")
+function3("Ayush",147,"ECE")
+function3("Tanay",190,"Nursing")
 print()
+
