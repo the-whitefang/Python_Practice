@@ -22,3 +22,10 @@ function3("Ayush",147,"ECE")
 function3("Tanay",190,"Nursing")
 print()
 
+def function4(*var):#tuple
+    for i in var:
+        print(i,end=' ')
+    print()
+function4(10,20)
+function4(10,20,30,40)
+function4(10,20,30,40,50,60)
