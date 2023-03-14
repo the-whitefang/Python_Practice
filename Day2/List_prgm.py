@@ -8,19 +8,19 @@ print(list2,type(list2))
 list4 = list([100,200,300,400])
 print(type(list4))
 list5 = [101,393,29,883]
-list5.append(344)
+list5.append(344)#append method example
 print(list5)
-list5.extend([929,873,838])
+list5.extend([929,873,838])#extend method example
 print(list5)
 list5.insert(0,43)#index, value
 print(list5)
 list5.insert(4,50)#index, value
 print(list5)
-list5.remove(929)
+list5.remove(929)#remove method example
 print(list5)
-list5.pop()
+list5.pop()#pop method example
 print(list5)
 list5.pop(5)
 print(list5)
-del list5[2]
+del list5[2]#del method example
 print(list5)
