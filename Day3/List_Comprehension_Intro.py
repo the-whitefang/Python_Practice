@@ -31,3 +31,4 @@ print(l1)
 
 #List Comprehenson version of printing if the numbers of the list is odd else if even print its square
 print([i if i % 2 != 0 else i**2 for i in range(11)])
+
