@@ -15,3 +15,9 @@ print(result)
 #using Dictionary Comprehension
 print({i:mylist.index(i)
       for i in list_b})
+
+#
+result1 ={}
+for i in list_b:
+    result1[i] = mylist.index(i)
+print(result1)
