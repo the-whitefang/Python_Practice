@@ -5,13 +5,19 @@ is different from that of the positions of digits in num1.
 '''
 num1 = int(input("Enter the Starting number: "))
 num2 = int(input("Enter the ending number: "))
-array = [ i for i in range(num1,num2+1)]
+array = [ i for i in range(num1,num2+1)]# printing the array elements using list comprehension
 print(array)
 
+#printing the values using nested loop
 result = []
 for i in range(len(array)):
     for j in range(i,len(array)):
         result. append(array[i:j+1])
+print(result)
+
+#printiing the values using list comprehension method
+result = [array[i:j+1] for i in range(len(array))
+          for j in range(i,len(array))]
 print(result)
 
 
