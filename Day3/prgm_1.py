@@ -1,9 +1,19 @@
+'''
+
+'''
+
 mat = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 
-#
-print([j**2 if j % 2 != 0 else j**3 for i in mat for j in i ])
+#List Comprehension version of printing Square of the Odd numbers and Cube of the Even numbers
+print(
+    [
+        j**2 if j % 2 != 0 else j**3
+        for i in mat
+        for j in i
+     ]
+      )
 
-#
+#Regular for loop method of printing Square of the Odd numbers and Cube of the Even numbers
 result = []
 for row in mat:
     row_data =[]
@@ -14,15 +24,3 @@ for row in mat:
             row_data.append(column**3)
     result.append(row_data)
 print(result)
-
-#
-print( [ele**2 if ele%2!=0 else ele**3
-        for row in mat
-        for ele in row]
-       )
-
-#
-print( [[ele**2 if ele%2!=0 else ele**3
-        for ele in row]
-        for row in mat]
-       )
