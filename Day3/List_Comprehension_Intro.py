@@ -20,6 +20,4 @@ print(l1)
 #odd elements --> List Comprehension method
 print([i for i in range(11) if i %2 != 0 ])
 
-'''
 
-'''
