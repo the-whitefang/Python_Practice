@@ -1,3 +1,11 @@
+'''
+program to take a list of marks of 10 students and
+(1) find the average of their marks and find how many students have scored more than the average marks
+(2) find how many students have scored the same marks for example, how many have scored 0, how many have scored
+1...,how many have scored 25
+(3) sort the marks in increasing order from 0 to 25
+'''
+
 def find_more_than_average(list_Marks):#to find the percentage of students who have marks more than average
     avg = sum(list_Marks)/ len(list_Marks)
     c =0
