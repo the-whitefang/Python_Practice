@@ -1,3 +1,7 @@
+'''
+find the output of the following cod :
+'''
+
 class Customer :
     def  __int__(self,id):
         self.id = id

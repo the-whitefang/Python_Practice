@@ -1,3 +1,6 @@
+'''
+Find the output of the following code
+'''
 class Book:
     def __init__(self):
         self.title = None
