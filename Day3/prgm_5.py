@@ -1,4 +1,8 @@
 '''
+String rotation
+Input: rhdt:246, ghftd:1246
+1 -> if sum of the square of the digits is even then rotate the string by 1.
+2 -> if sum of the squares of the digits is odd then rotate the string left by 2 position
 
 '''
 
