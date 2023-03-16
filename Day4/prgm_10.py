@@ -1,3 +1,6 @@
+'''
+Output of the code
+'''
 class Shoe:
     def __init__(self,price,material):
         self.price = price
