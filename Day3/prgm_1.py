@@ -1,5 +1,6 @@
 '''
-
+program to print the square of the odd numbres and cube of the even numbers
+present in the matrix.
 '''
 
 mat = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
