@@ -3,16 +3,17 @@ class Customer:
         self.cust_id = cust_id
         self.name = name
         self.age = age
-        self.wallet_balance = wallet_balance
+        self.__wallet_balance = wallet_balance
 
-    def update_Balance(self,amount):
-        if amount< 1000 and amount > 0:
-            self.wallet_balance += amount
+    def set_Balance(self,amount):
+        if amount< 50000 and amount > 0:
+            self.__wallet_balance += amount
 
 
-    def show_Balance(self):
-        print("The balance is ",self.wallet_balance)
+    def get_wallet_balance(self):
+        return self.__wallet_balance
 
 c1 = Customer(100,"Gopal",24,1000)
-c1.update_Balance(500)
-c1.show_Balance()
+print(c1.get_wallet_balance())
+c1.set_Balance(5000)
+print(c1.get_wallet_balance())
