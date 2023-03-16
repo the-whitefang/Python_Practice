@@ -1,7 +1,7 @@
 '''
 
 '''
-class Employee
+class Employee():
     def _int_(self):
         self.employee_id = None
         def check_eligibility(self):
