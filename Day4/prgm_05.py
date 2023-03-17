@@ -1,3 +1,6 @@
+'''
+Find the output of the following code:
+'''
 class Example:
     def __init__(self,num):
         self.num = num

@@ -1,3 +1,6 @@
+'''
+Find the output of the following code here:
+'''
 class Table:
     def __init__(self):
         self.no_of_legs = 4
