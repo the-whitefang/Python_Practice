@@ -42,7 +42,7 @@ class Vehicles:
             self.__premium_amount = (6/100.0) * self.__vehicle_cost
 
 
-c1 = Vehicles(154,"Four Wheeler",50000)
+c1 = Vehicles(154,"Two Wheeler",50000)
 c1.setter_Premium_Amount()
 c1.getter_Id()
 c1.getter_Type()
