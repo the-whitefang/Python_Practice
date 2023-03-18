@@ -40,12 +40,12 @@ class Pizzaservice:
             return False
 
     def Calculate_Pizza_Cost(self):
-        if self.validate_pizza_type() and Customer.Validate_Quantity(self.__customer):
+        if self.Validate_Pizza_Type() and Customer.Validate_Quantity(self.__customer):
             if self.__pizza_type.title() == "Small":
                 self.pizza_cost = 150 * Customer.get_Quantity(self.__customer)
                 if self.__additional_toppings:
                     self.pizza_cost += 35 * Customer.get_Quantity(self.__customer)
-            if self.__pizza_type.title(0 == "Medium":
+            if self.__pizza_type.title() == "Medium":
                 self.pizza_cost = 200 * Customer.get_Quantity(self.__customer)
                 if self.__additional_toppings:
                     self.pizza_cost += 50 * Customer.get_Quantity(self.__customer)
@@ -94,3 +94,11 @@ class Doordelivery(Pizzaservice):
 
 c = Customer("Asha",5)
 p1 = Pizzaservice(c,"MEDIUM",True)
+p1.Calculate_Pizza_Cost()
+print((p1.pizza_cost))
+print(p1.get_service_id())
+
+d1 = Doordelivery(c,"MEDIUM",True, 6)
+d1.Calculate_Pizza_Cost()
+print(d1.pizza_cost)
+print(d1.get_service_id())
