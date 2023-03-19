@@ -1,3 +1,8 @@
+'''
+Program to calculate the amount left after the withdrawal from the account also see
+whether the account holder is privileged or not. If Privileged then calculate the
+bonus.
+'''
 class OverdrawException(Exception):
     pass
 

@@ -1,5 +1,7 @@
 '''
-
+Program to print the amount to be paid by the customer as per type of pizza ordered
+by the customer and also calculate the bill as per the type of service door delivery based
+on the distance.
 '''
 
 types = ['small', 'medium', 'Small', 'Medium']

@@ -1,5 +1,5 @@
 '''
-
+Program to calculate the Premium of vehicles.
 '''
 class Vehicles:
     def __init__(self,vehicle_id,vehicle_type,vehicle_cost):

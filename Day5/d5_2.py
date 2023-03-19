@@ -1,5 +1,7 @@
 '''
-
+Program to see whether a student is elligible for admission or not as per
+the marks scored by the students and see whether they can get the scholorship or not
+A student is identified by their student_id, age, marrks in the subject.
 '''
 class Students:
     def __init__(self,id,age,marks,fees):
