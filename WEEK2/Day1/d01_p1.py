@@ -1,3 +1,6 @@
+'''
+
+'''
 class Stack:
     def __init__(self,max_size):
         self.__max_size = max_size
