@@ -36,3 +36,11 @@ list_Marks = (12,18,25,24,2,5,18,20,20,21)
 find_more_than_average(list_Marks)
 generate_Frequency(list_Marks)
 sort_Marks(list_Marks)
+
+
+
+
+
+
+
+

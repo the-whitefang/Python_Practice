@@ -10,4 +10,4 @@ def Characters(str):
         print(str+"ly")
     else:
         print(str+"ing")
-Characters("amazing")
+Characters("sleep")
