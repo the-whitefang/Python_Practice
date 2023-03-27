@@ -1,5 +1,5 @@
 '''
-
+Stack program example
 '''
 class Stack:
     def __init__(self,max_size):
