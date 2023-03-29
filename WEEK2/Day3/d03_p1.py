@@ -89,6 +89,24 @@ class DoublyLinkedList:
             temp.previous.next = None
             temp.previous = None
 
+    def DeleteFromASpecificPosition(self,position):
+        if self.isEmpty():
+            print("linked lis is empty. cannot delete elements")
+        elif position == 1:
+            self.DeleteFromBegining()
+        else:
+            temp = self.head
+            count = 1
+            while temp is None:
+                if count == position:
+                    break
+                temp = temp.next
+                count = count +1
+            if temp is None:
+                print("There are less than {} elements in linked list")
+            elif temp.next is None:
+                self.DeleteFromLast()
+
     def printLinkedList(self):  # function to print the double linkec list
         temp = self.head
         while temp:
@@ -104,6 +122,7 @@ new.InsertAtTheEnd(99)
 new.InsertAtTheBegining(20)
 new.InsertAtTheBegining(30)
 new.InsertAtTheBegining(50)
+new.DeleteFromASpecificPosition(3)
 new.DeleteFromBegining()
 new.DeleteFromLast()
 
