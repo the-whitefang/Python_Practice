@@ -1,11 +1,14 @@
 '''
 ***Double Linked List***
 '''
+
+
 class Node:
-    def __init__(self,value):
+    def __init__(self, value):
         self.previous = None
-        self.data= value
-        self.next =None
+        self.data = value
+        self.next = None
+
 
 class DoublyLinkedList:
     def __init__(self):
@@ -18,32 +21,71 @@ class DoublyLinkedList:
 
     def Length(self):
         temp = self.head
-        count =0
+        count = 0
         while temp is not None:
             temp = temp.next
             count += 1
         return count
-    def InsertAtTheBegining(self,value):
-        new_node =Node(value)
+
+    def InsertAtTheBegining(self, value):
+        new_node = Node(value)
         if self.isEmpty():
             self.head = new_node
         else:
             new_node.next = self.head
             self.head.previous = new_node
-            self.head =new_node
+            self.head = new_node
+
+
+    def InsertAtPosition(self,value,position):
+        temp = self.head
+        count =0
+        while temp is not None:
+            if count == position-1:
+                break
+            count +=1
+            temp = temp.next
+            if position == 1:
+                self.InsertAtTheBegining(value)
+            elif temp is None:
+                print("There are less than {}-1 elements in the linked list")
+            elif temp.next is None:
+                self.InsertAtTheEnd(value)
+            else:
+                new_node = Node(value)
+                new_node.next = temp.next
+                new_node.previous = temp
+                temp.next.previous = new_node
+                temp.next = new_node
+
+
+    def InsertAtTheEnd(self,value):
+        new_node =Node(value)
+        if self.isEmpty():
+            self.InsertAtTheBegining(value)
+        else:
+            temp = self.head
+            while temp.next is not None:
+                temp = temp.next
+            temp.next = new_node
+            new_node.previous = temp
+
     def printLinkedList(self):
         temp = self.head
         while temp:
-            print(temp.data,end=" ")
+            print(temp.data, end=" ")
             temp = temp.next
+
 
 new = DoublyLinkedList()
 print(new.isEmpty())
 new.InsertAtTheBegining(5)
 new.InsertAtTheBegining(10)
+new.InsertAtTheEnd(99)
 new.InsertAtTheBegining(20)
 new.InsertAtTheBegining(30)
 new.InsertAtTheBegining(50)
+
 new.printLinkedList()
 print()
 print(new.Length())
