@@ -32,12 +32,12 @@ class LinkedList:
             temp = temp.next
 
 new = LinkedList()
-new.push(20)
-new.push(4)
+new.push(84)
 new.push(15)
-new.push(85)
+new.push(4)
+new.push(20)
 print("Given Linked List")
 new.printList()
 new.reverse()
-print("Reversed Linked List")
+print("\nReversed Linked List")
 new.printList()
