@@ -26,4 +26,18 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
     def printList(self):
-        pass
+        temp = self.head
+        while temp:
+            print(temp.data, end=" ")
+            temp = temp.next
+
+new = LinkedList()
+new.push(20)
+new.push(4)
+new.push(15)
+new.push(85)
+print("Given Linked List")
+new.printList()
+new.reverse()
+print("Reversed Linked List")
+new.printList()
