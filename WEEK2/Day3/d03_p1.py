@@ -69,6 +69,25 @@ class DoublyLinkedList:
                 temp = temp.next
             temp.next = new_node
             new_node.previous = temp
+    def DeleteFromBegining(self):
+        if self.isEmpty():
+            print("Linked list is empty. Cannot delete elements.")
+        elif self.head.next is None:
+            self.head =None
+        else:
+            self.head = self.head.next
+            self.head.previous = None
+    def DeleteFromLast(self):
+        if self.isEmpty():
+            print("Linked list is empty. Cannot delete elements")
+        elif self.head.next is None:
+            self.head = None
+        else:
+            temp = self.head
+            while temp.next is not None:
+                temp = temp.next
+            temp.previous.next =None
+            temp .previous = None
 
     def printLinkedList(self):
         temp = self.head
@@ -85,6 +104,8 @@ new.InsertAtTheEnd(99)
 new.InsertAtTheBegining(20)
 new.InsertAtTheBegining(30)
 new.InsertAtTheBegining(50)
+new.DeleteFromBegining()
+new.DeleteFromLast()
 
 new.printLinkedList()
 print()
