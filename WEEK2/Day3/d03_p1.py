@@ -104,8 +104,14 @@ class DoublyLinkedList:
                 count = count +1
             if temp is None:
                 print("There are less than {} elements in linked list")
+                return
             elif temp.next is None:
                 self.DeleteFromLast()
+                return
+            temp.previous.next = temp.next
+            temp.next.previous = temp.previous
+            temp.next = None
+            temp.previous = None
 
     def printLinkedList(self):  # function to print the double linkec list
         temp = self.head
