@@ -36,14 +36,13 @@ class DoublyLinkedList:
             self.head.previous = new_node
             self.head = new_node
 
-
-    def InsertAtPosition(self,value,position):
+    def InsertAtPosition(self, value, position):
         temp = self.head
-        count =0
+        count = 0
         while temp is not None:
-            if count == position-1:
+            if count == position - 1:
                 break
-            count +=1
+            count += 1
             temp = temp.next
             if position == 1:
                 self.InsertAtTheBegining(value)
@@ -58,9 +57,8 @@ class DoublyLinkedList:
                 temp.next.previous = new_node
                 temp.next = new_node
 
-
-    def InsertAtTheEnd(self,value):
-        new_node =Node(value)
+    def InsertAtTheEnd(self, value):  # function to insert an element at the end of the double linked list.
+        new_node = Node(value)
         if self.isEmpty():
             self.InsertAtTheBegining(value)
         else:
@@ -69,15 +67,17 @@ class DoublyLinkedList:
                 temp = temp.next
             temp.next = new_node
             new_node.previous = temp
-    def DeleteFromBegining(self):
+
+    def DeleteFromBegining(self):  # function to delete an element from the begining of a double linked list
         if self.isEmpty():
             print("Linked list is empty. Cannot delete elements.")
         elif self.head.next is None:
-            self.head =None
+            self.head = None
         else:
             self.head = self.head.next
             self.head.previous = None
-    def DeleteFromLast(self):
+
+    def DeleteFromLast(self):  # function to delete an element from the last of a double linked list
         if self.isEmpty():
             print("Linked list is empty. Cannot delete elements")
         elif self.head.next is None:
@@ -86,10 +86,10 @@ class DoublyLinkedList:
             temp = self.head
             while temp.next is not None:
                 temp = temp.next
-            temp.previous.next =None
-            temp .previous = None
+            temp.previous.next = None
+            temp.previous = None
 
-    def printLinkedList(self):
+    def printLinkedList(self):  # function to print the double linkec list
         temp = self.head
         while temp:
             print(temp.data, end=" ")
