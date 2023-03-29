@@ -2,17 +2,18 @@
 
 '''
 
+
 class Evaluate:
 
-    def __init__(self,capacity):
+    def __init__(self, capacity):
         self.top = -1
         self.capacity = capacity
-        self. array = []
+        self.array = []
 
     def isEmpty(self):
         return True if self.top == -1 else False
 
-    def peek (self):
+    def peek(self):
         return self.array[-1]
 
     def pop(self):
@@ -22,11 +23,11 @@ class Evaluate:
         else:
             return "$"
 
-    def push(self,op):
+    def push(self, op):
         self.top += 1
         self.array.append(op)
 
-    def evaluatePostFix(self,exp):
+    def evaluatePostFix(self, exp):
         for i in exp:
             if i.isdigit():
                 self.push(i)
@@ -36,7 +37,8 @@ class Evaluate:
                 self.push(str(eval(val2 + i + val1)))
         return int(self.pop())
 
+
 if __name__ == '__main__':
     exp = "231*+9-"
     obj = Evaluate(len(exp))
-    print("postfix evaluation: %d" %(obj.evaluatePostFix(exp)))
+    print("postfix evaluation: %d" % (obj.evaluatePostFix(exp)))
