@@ -1,4 +1,4 @@
-class Node: # Node Class to create a node in a single linked list that stores the seat type, number of reserved seats and total number of seats.
+class Node:  # Node Class to create a node in a single linked list that stores the seat type, number of reserved seats and total number of seats.
     def __init__(self, seat_type, reserved, capacity):
         self.seat_type = seat_type
         self.reserved = reserved
@@ -6,12 +6,12 @@ class Node: # Node Class to create a node in a single linked list that stores th
         self.next = None
 
 
-class Compartment: # Compartment Class to create the linked list that stores the nodes of the train compartment.
+class Compartment:  # Compartment Class to create the linked list that stores the nodes of the train compartment.
 
     def __init__(self):
         self.head = None
 
-    def insert_at_end(self, seat_type, reserved, capacity): # function to add the datas at the specific nodes
+    def insert_at_end(self, seat_type, reserved, capacity):  # function to add the datas at the specific nodes
         newnode = Node(seat_type, reserved, capacity)
         if self.head is None:
             self.head = newnode
@@ -22,7 +22,8 @@ class Compartment: # Compartment Class to create the linked list that stores the
         a.next = newnode
 
 
-class Train:
+class Train:  # function to get the compartment list from the compartment class and count the no of compartments and
+    # count the number of vacancy
     def __init__(self, train_name, compartment_list):
         self.train_name = train_name
         self.compartment_list = compartment_list
