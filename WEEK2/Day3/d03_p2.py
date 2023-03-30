@@ -22,5 +22,7 @@ class LinkedList:
         current = self.head
         while current.next is not None:
             if current.next.data == current.data:
-                current.next
+                current.data = current.next.data
+            current.next = current.next.next
+
 
