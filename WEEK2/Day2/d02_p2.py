@@ -46,9 +46,9 @@ class LinkedList:
         n = self.start_node
         while n.ref.ref is not None:
             n = n.ref
-        n.ref =None
+        n.ref = None
 
-    def delete_element_by_value(self,x):
+    def delete_element_by_value(self, x):
         if self.start_node is None:
             print("The list has no element to delete")
             return
@@ -66,7 +66,7 @@ class LinkedList:
         else:
             n.ref = n.ref.ref
 
-    def search_item(self,x):
+    def search_item(self, x):
         if self.start_node is None:
             print("List has no elements")
             return
@@ -83,20 +83,20 @@ class LinkedList:
         if self.start_node is None:
             return 0;
         n = self.start_node
-        count =0
+        count = 0
         while n is not None:
             count += 1
             n = n.ref
         return count
 
-    def insert_at_index(self,index,data):
+    def insert_at_index(self, index, data):
         if index == 1:
             new_node = Node(data)
             new_node.ref = self.start_node
             self.start_node = new_node
         i = 1
         n = self.start_node
-        while i < index-1 and n is not None:
+        while i < index - 1 and n is not None:
             n = n.ref
             i += 1
         if n is None:
@@ -106,7 +106,8 @@ class LinkedList:
             new_node.ref = n.ref
             n.ref = new_node
 
-new =LinkedList()
+
+new = LinkedList()
 new.insert_at_end(5)
 new.insert_at_end(10)
 new.insert_at_end(15)

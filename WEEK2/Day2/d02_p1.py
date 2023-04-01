@@ -13,24 +13,24 @@ class Node:
 
 
 class SLinkedList:
-    def __int__(self):
+    def __init__(self):
         self.headval = None
 
     def lisprint(self):
         printval = self.headval
         while printval is not None:
-            print(printval.dataval)
+            print(printval.dataval,end="->")
             printval = printval.nextval
 
-#function to add a new value at the begining of the linked list
+    # function to add a new value at the begining of the linked list
     def atBegining(self, newdata):
         NewNode = Node(newdata)
         # update the new nodes next val to existing node
         NewNode.nextval = self.headval
         self.headval = NewNode
 
-#function to add a value in between 2 nodes of a linked list
-    def InBetween(self,middel_node,newdata):
+    # function to add a value in between 2 nodes of a linked list
+    def InBetween(self, middel_node, newdata):
         if middel_node is None:
             print("The mentioned Node is absent")
             return
@@ -39,16 +39,16 @@ class SLinkedList:
         NewNode.nextval = middel_node.nextval
         middel_node.nextval = NewNode
 
-#function to add a new value at the end of a linked list
-    def AtEnd(self,newData):
-        NewNode= Node(newData)
+    # function to add a new value at the end of a linked list
+    def AtEnd(self, newData):
+        NewNode = Node(newData)
         if self.headval is None:
             self.headval = NewNode
             return
-        laste= self.headval
-        while(laste.nextval):
+        laste = self.headval
+        while (laste.nextval):
             laste = laste.nextval
-        laste.nextval =NewNode
+        laste.nextval = NewNode
 
 
 list = SLinkedList()
@@ -61,6 +61,6 @@ list.headval.nextval = e2
 # link second node to third node
 e2.nextval = e3
 list.atBegining("Sun")
-list.InBetween(list.headval.nextval.nextval.nextval,"Fri")
+list.InBetween(list.headval.nextval.nextval.nextval, "Fri")
 list.AtEnd("Thu")
 list.lisprint()
