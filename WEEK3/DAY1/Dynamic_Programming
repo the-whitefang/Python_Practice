@@ -1,0 +1,56 @@
+** Dynamic Programming **
+-> Greedy Algorithm:
+a. Minimum Spanning Tree:
+   It is of two types:
+   i. Prims Algorithm
+   ii. Kruskal Algorithm
+
+Spanning Tree:
+    1. It should not have any cycle
+    2. Number of edges should be n-1 when n = number of vertices
+MST:
+1. One tree can have many Spanning trees out of which find out the who's cost and weight is lesser is called
+   as one MST.
+
+Implementation of Kruskal Algorithm:
+The Concept used in this operation is Disjoint Sets.
+This Concept has 3
+
+Algorithm:-
+1. Create the Graph
+2. Sort the edges using inbuilt method
+3. Use Disjoints sets Data Structure
+   - Disjoint Sets has 3 operations:
+        i. make-set
+        ii. find
+        iii. union: * if vertices belong to the same set union cannot be performed
+
+find algorithm:
+find(i)
+{
+while p[i] > 0 do
+    i = p[i]
+return i
+}
+
+union algorithm:
+union(i,j){
+x= find(i)
+y= find(j)
+if x != y then
+    p[y]=x
+}
+
+
+Algorithm :
+MST---Kruskal(G,W) is graph, W is cost or weight
+for vertex vertex(G)
+    1. do Make-set(v)
+        (nothing but we consider every vertex as individual sets)
+    2. sort the edges of E in non decreasing order in terms of weight
+        for each edge(u,v) in sorted order.
+    3. apply find-set for u and v
+        if find-set(u) != find-set(v) means they are
+        in different set so add that as one edges in ur MST.
+    4. to add you will do union(u,v) now this loop u continue for all edges
+        and this loop you continue for all edges and which all forming will not be added.
