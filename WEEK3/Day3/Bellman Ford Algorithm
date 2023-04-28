@@ -1,0 +1,5 @@
+                                 *** BELLMAN FORD ALGORITHM ***
+
+Disadvantage:
+If the given graph is having a cycle and total cost becomes a -ve number, Bellman Ford Algorithm won't work.
+Means after n-1th time vertices should not get relaxed, in the sense the numbers or cost should not change.
