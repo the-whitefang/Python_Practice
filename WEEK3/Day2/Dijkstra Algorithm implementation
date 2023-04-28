@@ -1,4 +1,4 @@
-*** Dijkstra Algorithm implementation ***
+                                   *** Dijkstra Algorithm implementation ***
 
 1. Create a set sptset(shortest path tree set) that keeps tract of vertices included in shortest path, i.e,
    whose minimum distance from source is calculates and finalized. Initially, this set is empty.
@@ -6,5 +6,3 @@
 2. Assign a distance value to all vertices in the input graph. Initialize all distance values as INFINITE.
    Assign distance value as 0 for the source vertex so that it picked first.
 3.
-
-

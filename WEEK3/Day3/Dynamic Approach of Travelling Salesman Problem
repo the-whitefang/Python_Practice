@@ -1,0 +1,38 @@
+                            *** Dynamic Approach of Travelling Salesman Problem ***
+
+1. Considering no more vertices to visit which means 0:
+    g{4} = 8
+    g{3} = 6
+    g{2} = 15
+2. Considering one vertex is pending:
+   Choices:
+            g{3,4} = 20
+            g{4,3} = 15
+            g{2,4} = 18
+            g{4,2} = 13
+            g{2,3} = 15
+            g{3,2} = 18
+3. Considering 2 choices pending:
+    Choices:
+            g{2,3} = 29
+            g{2,4} = 25
+            g{3,2} = 31
+            g{3,4} = 25
+            g{4,2} = 23
+            g{4,3} = 28
+4. Considering 3 choices pending:
+    Choices:
+            g{1,2} = 35
+            g{1,3} = 40
+            g{1,4} = 43
+
+FORMULAE: starting from 1
+g(1,{2,3,4}) = min(c1 to any k+g(k,{2,3,4} - {k})}
+generl formula:
+g(i,s) = min{CiK + G (K, S-{K})}
+
+considering subsets minimum
+path we hv to find. If size of S is 2, then S must C(S, i) = dist(1, i)
+Else if size of S is greater than 2.
+C(S, i) = min { C(S-{i}, j) + dis(j,i)}
+where j belongs to S, j != i and j != 1
